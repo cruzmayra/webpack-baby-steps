@@ -1,0 +1,1 @@
+console.log('multi entry points: Home')
