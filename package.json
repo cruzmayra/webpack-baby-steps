@@ -4,7 +4,9 @@
   "description": "Proyecto del curso de Webpack en Platzi",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:manual": "webpack --entry ./index.js --output ./bundle.js --mode development",
+    "build:external": "webpack --config ./external/webpack.config.js"
   },
   "keywords": [
     "webpack",
