@@ -1,3 +1,11 @@
 import '../css/index.css'
+import text from './text.js'
 
-document.body.innerHTML = '<p>Esto está corriendo en un servidor de desarrollo</p>'
+text()
+
+if(module.hot) {
+  module.hot.accept('./text.js', function () {
+    console.log('he recargado, en caliente')
+    text()
+  })
+}
