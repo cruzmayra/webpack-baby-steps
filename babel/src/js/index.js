@@ -1,11 +1,13 @@
 import '../css/index.css'
-import text from './text.js'
+import search from './search'
+import render from './render'
 
-text()
+const id = prompt('¿Quién es ese pokemón?')
 
-if(module.hot) {
-  module.hot.accept('./text.js', function () {
-    console.log('he recargado, en caliente')
-    text()
+search(id)
+  .then(data => {
+    render(data)
   })
-}
+  .catch( error => {
+    console.log(error.message)
+  })
